@@ -118,7 +118,10 @@ namespace JrtFS.Controllers
         }
 
 
-
+        /// <summary>
+        /// 上传文件到服务器
+        /// </summary>
+        /// <returns></returns>
         [HttpPost, AuthorizedAccess]
         [Route("uploadFile")]
         public async Task<HttpResponseMessage> UploadFile()
@@ -166,35 +169,7 @@ namespace JrtFS.Controllers
 
 
 
-        ///// <summary>
-        ///// 上传文件
-        ///// </summary>
-        ///// <param name="fileName">文件名</param>
-        ///// <returns></returns>
-        //[Route("upload")]
-        //[HttpPost]
-        //public HttpResponseMessage Upload([FromUri]string fileName)
-        //{
-        //    var task = this.Request.Content.ReadAsStreamAsync();
-        //    task.Wait();
-        //    Stream requestStream = task.Result;
 
-        //    try
-        //    {
-        //        var filePath = FileConfig.MapPath(fileName);
-
-        //        Stream fileStream = File.Create(filePath);
-        //        requestStream.CopyTo(fileStream);
-        //        fileStream.Close();
-        //        requestStream.Close();
-        //    }
-        //    catch (IOException ex)
-        //    {
-        //        return this.ApiResult(FsAPiCode.NormalError, ex.Message);
-        //    }
-
-        //    return this.ApiResult(FsAPiCode.Success);
-        //}
 
 
     }

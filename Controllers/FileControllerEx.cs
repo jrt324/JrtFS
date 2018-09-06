@@ -47,6 +47,12 @@ namespace JrtFS.Controllers
             return this.ApiResult(ApiStatusCodes.Success, exist.ConvertTo<int>());
         }
 
+
+        /// <summary>
+        /// 根据路径path获取对象信息
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
         [HttpPost, AuthorizedAccess]
         [MultiParameterSupport]
         [Route("getObject")]
