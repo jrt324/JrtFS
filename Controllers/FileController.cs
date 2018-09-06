@@ -20,6 +20,11 @@ namespace JrtFS.Controllers
     [RoutePrefix("fs")]
     public partial class FileController : ApiController
     {
+        /// <summary>
+        /// get file stream
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
         [HttpPost, AuthorizedAccess]
         [MultiParameterSupport]
         [Route("getFile")]
